@@ -1,16 +1,238 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap");
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+/* font-family: 'Dosis', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Playfair Display', serif; */
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+:root {
+  /* text-colors */
+  --text-primary-light: #ffffff;
+  --text-secondary-light: #dddddd;
+  --object-primary-color: #fbc211;
+  /* background-colors */
+  --background-primary-dark-color: #1d1d1d;
+  --background-secondary-dark-color: #161616;
+  /* font-sizes */
+  --sm-heading-font-size: 25px;
+  --sm-heading-highlight-size: 28px;
+}
+/* 
+  0. Global
+*/
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+.container {
+  width: 95%;
+  margin: 0 auto;
+  position: relative;
+}
+@media only screen and (min-width: 360px) {
+  .container {
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .container{
+    max-width: 540px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container{
+    max-width: 720px;
+  }
+}
+/* 
+  1. Header
+*/
+.header {
+  display: flex;
+  width: 100%;
+  height: 75px;
+  background: transparent;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+#topNavLogo {
+  width: 100px;
+  height: 75px;
+}
+.top-nav-logo-text {
+  fill: var(--text-primary-light);
+  font-size: 40px;
+  font-family: "Lily Script One", "cursive";
+}
+.top-nav-logo-bar {
+  fill: var(--object-primary-color);
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  width: 0;
+  margin-left: auto;
+  overflow: hidden;
+}
+.nav-links a {
+  display: flex;
+  align-items: center;
+}
+.nav-menubar{
+  align-items: center;
+}
+.nav-link-svg {
+  fill: var(--object-primary-color);
+  margin-left: 0.5rem;
+  width: 22px;
+  height: 22px;
+}
+.nav-links-container {
+  align-items: center;
+  width: 0;
+  display: flex;
+  margin-left: auto;
+  overflow: hidden;
+}
+.nav-links-slide-in {
+  animation: slide-in 0.5s forwards;
+  -webkit-animation: slide-in 0.5s forwards;
+}
+
+.nav-links-slide-out {
+  animation: slide-out 0.5s forwards;
+  -webkit-animation: slide-out 0.5s forwards;
+
+}
+
+@keyframes slide-in {
+  100% {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes slide-in {
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@-webkit-keyframes slide-out {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+@media only screen and (min-width: 360px) {
+  .header{
+    height: 100px;
+  }
+  .top-nav-logo-text {
+    font-size: 48px;
+  }
+  #topNavLogo {
+    width: 115px;
+  }
+  .nav-link-svg {
+    margin-left: 0.75rem;
+    width: 27px;
+    height: 27px;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #topNavLogo {
+    width: 125px;
+  }
+}
+@media only screen and (min-width: 576px) {
+  #topNavLogo {
+    width: 135px;
+  }
+  .nav-link-svg {
+    fill: var(--object-primary-color);
+    margin-left: 1rem;
+    width: 30px;
+    height: 30px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #topNavLogo {
+    width: 140px;
+  }
+  .nav-links, .nav-menubar{
+    display: none;
+  }
+
+}
+/* 
+  2. Home
+*/
+#home {
+  background-color: var(--background-primary-dark-color);
+  min-height: 550px;
+  padding-top: 100px;
+  color: var(--text-primary-light);
+}
+#home .article {
+  margin-top: 2rem;
+}
+.before-name {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--sm-heading-font-size);
+}
+.before-name::before {
+  content: "Hi!";
+  font-size: var(--sm-heading-highlight-size);
+  font-weight: 100;
+  color: var(--object-primary-color);
+  letter-spacing: 2px;
+}
+.name {
+  font-family: "Open Sans", sans-serif;
+  font-size: var(--sm-heading-highlight-size);
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--object-primary-color);
+}
+.after-name {
+  display: flex;
+  align-items: center;
+}
+.after-name .side-line {
+  width: 50px;
+  height: 1.5px;
+  margin: 2rem 3px;
+  background-color: var(--object-primary-color);
+}
+.after-name .side-line-text {
+  margin-left: 0.5rem;
+  color: var(--text-secondary-light);
+  font-size: 18px;
 }
