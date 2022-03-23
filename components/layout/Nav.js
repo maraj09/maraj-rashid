@@ -49,8 +49,20 @@ const Nav = () => {
         </div>
 
         <div className="scrolling-links">
-          <a href="">
-            
+          <a href="" className="scrolling-link--active">
+            Home
+          </a>
+          <a href="" className="scrolling-link">
+            About me
+          </a>
+          <a href="" className="scrolling-link">
+            Resume
+          </a>
+          <a href="" className="scrolling-link">
+            Testimonials
+          </a>
+          <a href="" className="scrolling-link">
+            Contactme
           </a>
         </div>
       </nav>
