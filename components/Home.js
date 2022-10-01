@@ -1,6 +1,6 @@
+import Script from "next/script";
 import React from "react";
 import ReactTyped from "react-typed";
-import "./assets/js/connectingDots"
 
 const Home = () => {
   return (
@@ -36,6 +36,7 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <Script type="text/javascript" src="/js/connectingDots.js" />
       </article>
     </>
   );
