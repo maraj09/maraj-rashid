@@ -1,11 +1,12 @@
 import React from "react";
 import ReactTyped from "react-typed";
-import Header from "./Header";
+import "./assets/js/connectingDots"
 
 const Home = () => {
   return (
     <>
       <article id="home">
+        <canvas id="connect" className="connecting-dots"></canvas>
         <div className="container">
           <div className="article">
             <h1 className="before-name"> I Am</h1>
@@ -26,9 +27,12 @@ const Home = () => {
                   backDelay={2500}
                   fadeOut={false}
                   loopCount={0}
-                  cursorChar="_"
+                  cursorChar="|"
                 />
               </p>
+            </div>
+            <div className="quotes">
+              <h1>Ready to work on the next big project for your business.</h1>
             </div>
           </div>
         </div>

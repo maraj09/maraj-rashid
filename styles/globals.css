@@ -85,6 +85,7 @@ p {
   left: 0;
   top: 0;
   right: 0;
+  z-index: 10;
 }
 nav {
   margin-left: auto;
@@ -94,6 +95,7 @@ nav {
 #topNavLogo {
   width: 100px;
   height: 75px;
+  margin-top: 10px;
 }
 .top-nav-logo-text {
   fill: var(--text-primary-light);
@@ -217,10 +219,10 @@ nav {
   .scrolling-links a {
     text-decoration: none;
     font-family: "Arvo", serif;
-    font-weight: 700;
+    font-weight:700;
     color: var(--text-primary-light);
     font-size: 15px;
-    transition: all .3s;
+    transition: all 0.3s;
   }
   .scrolling-links .scrolling-link::after {
     content: "";
@@ -252,7 +254,7 @@ nav {
     width: 525px;
   }
   .scrolling-links a {
-    font-size: 16px;
+    font-size: 15.45px;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -267,9 +269,7 @@ nav {
   #topNavLogo {
     width: 145px;
   }
-  .scrolling-links {
-    width: 600px;
-  }
+  
 }
 
 /* 
@@ -278,14 +278,22 @@ nav {
 #home {
   background-color: var(--background-primary-dark-color);
   min-height: 550px;
-  padding-top: 100px;
+  height: 93vh;
   color: var(--text-primary-light);
+  position: relative;
+  
 }
-
+.connecting-dots{
+  max-height: 93vh;
+  width: 100%;
+  position: absolute;
+  opacity: .75;
+}
 .before-name {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 26px;
+  padding-top: 100px;
 }
 .before-name::before {
   content: "Hi!";
@@ -296,7 +304,7 @@ nav {
 }
 .name {
   font-family: "Open Sans", sans-serif;
-  font-size: var(--sm-heading-highlight-size);
+  font-size: 28px;
   font-weight: 600;
   letter-spacing: 1px;
   color: var(--object-primary-color);
@@ -304,15 +312,23 @@ nav {
 .after-name {
   display: flex;
   align-items: center;
+  margin-top: 0.25rem;
 }
 .after-name .side-line {
-  width: 50px;
+  width: 30px;
   height: 1.5px;
-  margin: 2rem 3px;
+  margin: 1.25rem 0px;
   background-color: var(--object-primary-color);
 }
 .after-name .side-line-text {
   margin-left: 0.5rem;
   color: var(--text-secondary-light);
-  font-size: 18px;
+  font-size: 16px;
+}
+.quotes {
+  margin-top: 0.5rem;
+}
+.quotes h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
 }
